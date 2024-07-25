@@ -1,4 +1,4 @@
-import { config } from "dotenv";
+
 
 
 export const getGifs = async(category) => {
