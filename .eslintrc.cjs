@@ -6,10 +6,18 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
+    "plugin:jest/recommended"
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
+  settings: { react: { version: '18.2' },
+    "jest": {
+      "globalAliases": {
+        "describe": ["context"],
+        "fdescribe": ["fcontext"],
+        "xdescribe": ["xcontext"]
+      }
+    } },
   plugins: ['react-refresh'],
   rules: {
     'react/jsx-no-target-blank': 'off',
